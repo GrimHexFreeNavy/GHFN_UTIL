@@ -2,19 +2,19 @@
 CLS
 
 echo Clearing frontend config. . . .
-rmdir /s /q "..\LIVE\USER\Client\0\frontend" > nul 2>&1
-rmdir /s /q "..\PTU\USER\Client\0\frontend" > nul 2>&1
-rmdir /s /q "..\EPTU\USER\Client\0\frontend" > nul 2>&1
-rmdir /s /q "..\TECH-PREVIEW\USER\Client\0\frontend" > nul 2>&1
-rmdir /s /q "..\HOTFIX\USER\Client\0\frontend" > nul 2>&1
+rmdir /s /q "%~dp0..\LIVE\USER\Client\0\frontend" > nul 2>&1
+rmdir /s /q "%~dp0..\PTU\USER\Client\0\frontend" > nul 2>&1
+rmdir /s /q "%~dp0..\EPTU\USER\Client\0\frontend" > nul 2>&1
+rmdir /s /q "%~dp0..\TECH-PREVIEW\USER\Client\0\frontend" > nul 2>&1
+rmdir /s /q "%~dp0..\HOTFIX\USER\Client\0\frontend" > nul 2>&1
 
 echo Removing Star Citizen Shader Caches...
 rmdir /s /q "%LOCALAPPDATA%\Star Citizen\" > nul 2>&1
-rmdir /s /q "..\LIVE\USER\Client\0\shaders" > nul 2>&1
-rmdir /s /q "..\PTU\USER\Client\0\shaders" > nul 2>&1
-rmdir /s /q "..\EPTU\USER\Client\0\shaders" > nul 2>&1
-rmdir /s /q "..\TECH-PREVIEW\USER\Client\0\shaders" > nul 2>&1
-rmdir /s /q "..\HOTFIX\USER\Client\0\shaders" > nul 2>&1
+rmdir /s /q "%~dp0..\LIVE\USER\Client\0\shaders" > nul 2>&1
+rmdir /s /q "%~dp0..\PTU\USER\Client\0\shaders" > nul 2>&1
+rmdir /s /q "%~dp0..\EPTU\USER\Client\0\shaders" > nul 2>&1
+rmdir /s /q "%~dp0..\TECH-PREVIEW\USER\Client\0\shaders" > nul 2>&1
+rmdir /s /q "%~dp0..\HOTFIX\USER\Client\0\shaders" > nul 2>&1
 
 IF EXIST "%LOCALAPPDATA%\NVIDIA" (
 	echo.
@@ -48,8 +48,8 @@ IF EXIST "%LOCALAPPDATA%\AMD" (
 
 echo.
 echo Removing Star Citizen Backup Logs...
-rmdir /s /q "..\LIVE\logbackups" > nul 2>&1
-rmdir /s /q "..\PTU\logbackups" > nul 2>&1
-rmdir /s /q "..\EPTU\logbackups" > nul 2>&1
-rmdir /s /q "..\TECH-PREVIEW\logbackups" > nul 2>&1
-rmdir /s /q "..\HOTFIX\logbackups" > nul 2>&1
+rmdir /s /q "%~dp0..\LIVE\logbackups" > nul 2>&1
+rmdir /s /q "%~dp0..\PTU\logbackups" > nul 2>&1
+rmdir /s /q "%~dp0..\EPTU\logbackups" > nul 2>&1
+rmdir /s /q "%~dp0..\TECH-PREVIEW\logbackups" > nul 2>&1
+rmdir /s /q "%~dp0..\HOTFIX\logbackups" > nul 2>&1
