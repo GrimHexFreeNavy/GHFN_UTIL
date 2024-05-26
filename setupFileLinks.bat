@@ -19,19 +19,19 @@ IF %ERRORLEVEL% NEQ 0 (
 
 echo Backing up user folders . . .
 IF EXIST "%~dp0..\PTU" (
-    robocopy "%~dp0..\PTU\USER" "PTU.USER.BACKUP" %switches% > nul 2>&1
+    robocopy "%~dp0..\PTU\USER" "%~dp0\PTU.USER.BACKUP" %switches% > nul 2>&1
 )
 IF EXIST "%~dp0..\EPTU" (
-    robocopy "%~dp0..\EPTU\USER" "EPTU.USER.BACKUP" %switches% > nul 2>&1
+    robocopy "%~dp0..\EPTU\USER" "%~dp0\EPTU.USER.BACKUP" %switches% > nul 2>&1
 )
 IF EXIST "%~dp0..\TECH-PREVIEW" (
-    robocopy "%~dp0..\TECH-PREVIEW\USER" "TECH-PREVIEW.USER.BACKUP" %switches% > nul 2>&1
+    robocopy "%~dp0..\TECH-PREVIEW\USER" "%~dp0\TECH-PREVIEW.USER.BACKUP" %switches% > nul 2>&1
 )
 IF EXIST "%~dp0..\HOTFIX" (
-    robocopy "%~dp0..\HOTFIX\USER" "HOTFIX.USER.BACKUP" %switches% > nul 2>&1
+    robocopy "%~dp0..\HOTFIX\USER" "%~dp0\HOTFIX.USER.BACKUP" %switches% > nul 2>&1
 )
 IF EXIST "%~dp0..\LIVE" (
-    robocopy "%~dp0..\LIVE\USER" "LIVE.USER.BACKUP" %switches% > nul 2>&1
+    robocopy "%~dp0..\LIVE\USER" "%~dp0\LIVE.USER.BACKUP" %switches% > nul 2>&1
 )
 
 echo Removing test Environments . . .
@@ -52,7 +52,7 @@ IF EXIST "%~dp0..\LIVE" (
 
 echo Create symlinks for GAME . . .
 echo This will link the GAME folder to LIVE TECH-PREVIEW and HOTFIX
-IF EXIST "..\GAME" (
+IF EXIST "%~dp0..\GAME" (
     mklink /D "%~dp0..\LIVE" "%~dp0..\GAME" > nul 2>&1
     mklink /D "%~dp0..\TECH-PREVIEW" "%~dp0..\GAME" > nul 2>&1
     mklink /D "%~dp0..\HOTFIX" "%~dp0..\GAME" > nul 2>&1
@@ -60,7 +60,7 @@ IF EXIST "..\GAME" (
 
 echo Create symlinks for ETF . . .
 echo This will link the ETF folder to PTU and EPTU
-IF EXIST "..\ETF" (
+IF EXIST "%~dp0..\ETF" (
     mklink /D "%~dp0..\PTU" "%~dp0..\ETF" > nul 2>&1
     mklink /D "%~dp0..\EPTU" "%~dp0..\ETF" > nul 2>&1
 )
@@ -68,3 +68,5 @@ IF EXIST "..\ETF" (
 echo ==================================================================================
 echo Open the Star Citizen Launcher and Verify Game Files on all available environments
 echo ==================================================================================
+pause
+exit
