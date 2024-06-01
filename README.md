@@ -19,4 +19,4 @@ User Folders and config will be backed up to the directory where script exists.
 This is my user config file (Roberts Space Industries\StarCitizen\{LIVE, PTU, EPTU, TECH-PREVIEW, HOTFIX})
 
 # GHFN Performance Optimizations
-This guide now lives in wiki! you can find it here: [GHFN Performance Optimizaitons](https://github.com/jpzabriskie/GHFN_UTIL/wiki/Star-Citizen-Performance-Optimization)
+This guide now lives in wiki! you can find it here: [GHFN Performance Optimizaitons](https://github.com/GrimHexFreeNavy/GHFN_UTIL/wiki/Star-Citizen-Performance-Optimization)
