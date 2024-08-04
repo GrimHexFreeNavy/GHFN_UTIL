@@ -5,7 +5,7 @@ Installation.
 ## Installation
 1. To use this repository git CLI is required. you can download gitCLI here: [GIT CLI DOWNLOAD](https://git-scm.com/downloads)
 2. In your Star Citizen install directory (By Default: C:\Program Files\Roberts Space Industries\Star Citizen) run the following
-   3. `git clone git@github.com:jpzabriskie/GHFN_UTIL.git`
+   3. `git clone https://github.com/GrimHexFreeNavy/GHFN_UTIL.git`
 4. This will put a directory called `GHFN_UTIL` in your star citizen install director, all scrips can then be run via double-clicking. 
 
 ## clearSCAndGraphicsCaches.bat
